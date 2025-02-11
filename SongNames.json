@@ -1,1 +1,8 @@
-["Songs/Tokyo Reggie 0.mp3", "Yessir"]
+[
+    { "name": "Billy Joel - Piano Man", "path": "songs/Billy Joel - Piano Man.mp3" },
+    { "name": "Boston - More Than a Feeling", "path": "songs/Boston - More Than a Feeling.mp3" },
+    { "name": "Halsey - Could Have Been Me", "path": "songs/Halsey - Could Have Been Me.mp3" },
+    { "name": "Post Malone, Quavo - Congratulations", "path": "songs/Post Malone, Quavo - Congratulations.mp3" },
+    { "name": "Stealers Wheel - Stuck In The Middle With You", "path": "songs/Stealers Wheel - Stuck In The Middle With You.mp3" },
+    { "name": "Tokyo Reggie 0", "path": "songs/Tokyo Reggie 0.mp3" }
+]
