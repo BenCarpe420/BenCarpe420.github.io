@@ -1,8 +1,70 @@
 [
-    { "name": "Billy Joel - Piano Man", "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Billy%20Joel%20-%20Piano%20Man.mp3" },
-    { "name": "Boston - More Than a Feeling", "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Boston%20-%20More%20Than%20a%20Feeling.mp3" },
-    { "name": "Halsey - Could Have Been Me", "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Halsey%20-%20Could%20Have%20Been%20Me.mp3" },
-    { "name": "Post Malone, Quavo - Congratulations", "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Post%20Malone%2C%20Quavo%20-%20Congratulations.mp3" },
-    { "name": "Stealers Wheel - Stuck In The Middle With You", "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Stealers%20Wheel%20-%20Stuck%20In%20The%20Middle%20With%20You.mp3" },
-    { "name": "Tokyo Reggie 0", "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Tokyo%20Reggie%200.mp3" }
+    {
+        "name": "Blake Roman, The Living Tombstone, Sam Haft, Andrew Underberg - Poison (Hazbin Hotel Original Soundtrack) - Official Remix",
+        "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Blake%20Roman%2C%20The%20Living%20Tombstone%2C%20Sam%20Haft%2C%20Andrew%20Underberg%20-%20Poison%20%28Hazbin%20Hotel%20Original%20Soundtrack%29%20-%20Official%20Remix.mp3"
+    },
+    {
+        "name": "Red Hot Chili Peppers - Under the Bridge",
+        "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Red%20Hot%20Chili%20Peppers%20-%20Under%20the%20Bridge.mp3"
+    },
+    {
+        "name": "ABBA - Dancing Queen",
+        "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/ABBA%20-%20Dancing%20Queen.mp3"
+    },
+    {
+        "name": "Stealers Wheel - Stuck In The Middle With You",
+        "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Stealers%20Wheel%20-%20Stuck%20In%20The%20Middle%20With%20You.mp3"
+    },
+    {
+        "name": "Tokyo Reggie 0",
+        "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Tokyo%20Reggie%200.mp3"
+    },
+    {
+        "name": "Post Malone, Quavo - Congratulations",
+        "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Post%20Malone%2C%20Quavo%20-%20Congratulations.mp3"
+    },
+    {
+        "name": "Eagles - Hotel California - 2013 Remaster",
+        "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Eagles%20-%20Hotel%20California%20-%202013%20Remaster.mp3"
+    },
+    {
+        "name": "Bob Marley & The Wailers - Buffalo Soldier",
+        "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Bob%20Marley%20%26%20The%20Wailers%20-%20Buffalo%20Soldier.mp3"
+    },
+    {
+        "name": "A Flock Of Seagulls - I Ran (So Far Away) - Single Edit",
+        "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/A%20Flock%20Of%20Seagulls%20-%20I%20Ran%20%28So%20Far%20Away%29%20-%20Single%20Edit.mp3"
+    },
+    {
+        "name": "Billy Joel - Piano Man",
+        "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Billy%20Joel%20-%20Piano%20Man.mp3"
+    },
+    {
+        "name": "Halsey - Could Have Been Me",
+        "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Halsey%20-%20Could%20Have%20Been%20Me.mp3"
+    },
+    {
+        "name": "Rupert Holmes - Escape (The Pina Colada Song)",
+        "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Rupert%20Holmes%20-%20Escape%20%28The%20Pina%20Colada%20Song%29.mp3"
+    },
+    {
+        "name": "Dusty Springfield - Son of a Preacher Man",
+        "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Dusty%20Springfield%20-%20Son%20of%20a%20Preacher%20Man.mp3"
+    },
+    {
+        "name": "Michael Franti & Spearhead, Cherine Tanya Anderson - Say Hey (I Love You)",
+        "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Michael%20Franti%20%26%20Spearhead%2C%20Cherine%20Tanya%20Anderson%20-%20Say%20Hey%20%28I%20Love%20You%29.mp3"
+    },
+    {
+        "name": "Ryan Gosling - I'm Just Ken",
+        "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Ryan%20Gosling%20-%20I%27m%20Just%20Ken.mp3"
+    },
+    {
+        "name": "Boston - More Than a Feeling",
+        "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Boston%20-%20More%20Than%20a%20Feeling.mp3"
+    },
+    {
+        "name": "Jeremy Jordan, Erika Henningsen, Andrew Underberg, Sam Haft - More Than Anything",
+        "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Jeremy%20Jordan%2C%20Erika%20Henningsen%2C%20Andrew%20Underberg%2C%20Sam%20Haft%20-%20More%20Than%20Anything.mp3"
+    }
 ]
