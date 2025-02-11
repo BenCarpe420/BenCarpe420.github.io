@@ -13,7 +13,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(135deg, #fcbf49, #ffbc42); /* Sunset colors */
+            background: linear-gradient(135deg, #fcbf49, #ffbc42);
             color: #fff;
             overflow: hidden;
         }
@@ -72,7 +72,7 @@
             border: none;
             color: white;
             padding: 10px 20px;
-            margin-top: 10px;
+            margin: 10px;
             border-radius: 10px;
             font-size: 18px;
             cursor: pointer;
@@ -81,18 +81,29 @@
         .control-btn:hover {
             background: #f8d210;
         }
+        #now-playing {
+            font-size: 1.2em;
+            margin-top: 10px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Beach Music Player</h1>
 
+        <p id="now-playing">Now Playing: None</p>
+
         <audio id="audio-player" controls>
             <source id="audio-source" type="audio/mp3">
             Your browser does not support the audio element.
         </audio>
 
-        <button id="toggle-mode" class="control-btn">Shuffle Mode: OFF</button>
+        <div>
+            <button id="prev-song" class="control-btn">⏮ Previous</button>
+            <button id="toggle-mode" class="control-btn">Shuffle Mode: OFF</button>
+            <button id="next-song" class="control-btn">⏭ Next</button>
+        </div>
 
         <div class="song-list-container">
             <ul id="songs-list" class="song-list"></ul>
@@ -108,6 +119,9 @@
     const audioSource = document.getElementById('audio-source');
     const songsList = document.getElementById('songs-list');
     const toggleModeBtn = document.getElementById('toggle-mode');
+    const prevSongBtn = document.getElementById('prev-song');
+    const nextSongBtn = document.getElementById('next-song');
+    const nowPlayingText = document.getElementById('now-playing');
 
     // Fetch songs from JSON file
     fetch('SongNames.json')
@@ -142,12 +156,31 @@
         audioSource.src = songs[currentIndex].path;
         audioPlayer.load();
         audioPlayer.play();
+        nowPlayingText.textContent = `Now Playing: ${songs[currentIndex].name}`;
     }
 
     // Toggle Shuffle Mode
     toggleModeBtn.addEventListener('click', () => {
         isShuffle = !isShuffle;
         toggleModeBtn.textContent = `Shuffle Mode: ${isShuffle ? "ON" : "OFF"}`;
+    });
+
+    // Play next song
+    nextSongBtn.addEventListener('click', () => {
+        if (isShuffle) {
+            playSong(Math.floor(Math.random() * songs.length)); // Random song
+        } else {
+            playSong((currentIndex + 1) % songs.length); // Next song in sequence
+        }
+    });
+
+    // Play previous song
+    prevSongBtn.addEventListener('click', () => {
+        if (isShuffle) {
+            playSong(Math.floor(Math.random() * songs.length)); // Random song
+        } else {
+            playSong((currentIndex - 1 + songs.length) % songs.length); // Previous song in sequence
+        }
     });
 
     // Play next song when current song ends
