@@ -18,48 +18,68 @@
         .container {
             text-align: center;
         }
-        .song {
-            margin: 10px 0;
+        .song-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .song-item {
+            margin: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .song-item:hover {
+            background-color: rgba(255, 255, 255, 0.2);
         }
         audio {
-            margin-top: 5px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>My Music Player</h1>
-        <div id="songs-list"></div>
+        
+        <!-- Audio player -->
+        <audio id="audio-player" controls>
+            <source id="audio-source" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Song List -->
+        <ul id="songs-list" class="song-list"></ul>
     </div>
+
 <script>
-        // Fetch the songs.json file and dynamically display the songs
-        fetch('SongNames.json')
-            .then(response => response.json())
-            .then(data => {
-                const songsList = document.getElementById('songs-list');
-                data.forEach(song => {
-                    const songDiv = document.createElement('div');
-                    songDiv.classList.add('song');
+    // Fetch the songs.json file and dynamically display the songs
+    fetch('SongNames.json')
+        .then(response => response.json())
+        .then(data => {
+            const songsList = document.getElementById('songs-list');
+            const audioPlayer = document.getElementById('audio-player');
+            const audioSource = document.getElementById('audio-source');
 
-                    // Create song title
-                    const songTitle = document.createElement('p');
-                    songTitle.textContent = song.name;
-                    songDiv.appendChild(songTitle);
+            // Create a list item for each song
+            data.forEach(song => {
+                const songItem = document.createElement('li');
+                songItem.classList.add('song-item');
+                songItem.textContent = song.name;
 
-                    // Create audio player with controls (including play button)
-                    const audioPlayer = document.createElement('audio');
-                    audioPlayer.controls = true;  // Enables play/pause, volume control, etc.
-                    const source = document.createElement('source');
-                    source.src = song.path;
-                    source.type = 'audio/mp3';
-                    audioPlayer.appendChild(source);
-                    songDiv.appendChild(audioPlayer);
-
-                    // Add the song div to the list
-                    songsList.appendChild(songDiv);
+                // When a song is clicked, update the audio player source and play it
+                songItem.addEventListener('click', () => {
+                    audioSource.src = song.path;  // Update audio source
+                    audioPlayer.load();           // Reload the player to apply the new source
+                    audioPlayer.play();           // Play the song
                 });
-            })
-            .catch(error => console.error('Error loading SongNames.json:', error));
-    </script>
+
+                // Add the song item to the list
+                songsList.appendChild(songItem);
+            });
+        })
+        .catch(error => console.error('Error loading SongNames.json:', error));
+</script>
 </body>
 </html>
