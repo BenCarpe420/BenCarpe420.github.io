@@ -1,8 +1,8 @@
 [
-    { "name": "Billy Joel - Piano Man", "path": "Songs/Billy Joel - Piano Man.mp3" },
-    { "name": "Boston - More Than a Feeling", "path": "Songs/Boston - More Than a Feeling.mp3" },
-    { "name": "Halsey - Could Have Been Me", "path": "Songs/Halsey - Could Have Been Me.mp3" },
-    { "name": "Post Malone, Quavo - Congratulations", "path": "Songs/Post Malone, Quavo - Congratulations.mp3" },
-    { "name": "Stealers Wheel - Stuck In The Middle With You", "path": "Songs/Stealers Wheel - Stuck In The Middle With You.mp3" },
-    { "name": "Tokyo Reggie 0", "path": "https://media.githubusercontent.com/media/Laws0fPhysics1/lossantosfm/refs/heads/main/Songs/Tokyo Reggie 0.mp3" }
+    { "name": "Billy Joel - Piano Man", "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Billy%20Joel%20-%20Piano%20Man.mp3" },
+    { "name": "Boston - More Than a Feeling", "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Boston%20-%20More%20Than%20a%20Feeling.mp3" },
+    { "name": "Halsey - Could Have Been Me", "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Halsey%20-%20Could%20Have%20Been%20Me.mp3" },
+    { "name": "Post Malone, Quavo - Congratulations", "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Post%20Malone%2C%20Quavo%20-%20Congratulations.mp3" },
+    { "name": "Stealers Wheel - Stuck In The Middle With You", "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Stealers%20Wheel%20-%20Stuck%20In%20The%20Middle%20With%20You.mp3" },
+    { "name": "Tokyo Reggie 0", "path": "https://media.githubusercontent.com/media/bencarpe420/bencarpe420.github.io/refs/heads/main/Songs/Tokyo%20Reggie%200.mp3" }
 ]
