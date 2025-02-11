@@ -1,21 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+        }
+        .song {
+            margin: 10px 0;
+        }
+        audio {
+            margin-top: 5px;
+        }
+    </style>
+</head>
 <body>
-
-  
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-
+    <div class="container">
+        <h1>My Music Player</h1>
+        <div id="songs-list"></div>
+    </div>
 <script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Paragraph changed.";
-}
-</script>
-  
-<audio controls>
-  <source src="Songs/Tokyo Reggie 0.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
+        // Fetch the songs.json file and dynamically display the songs
+        fetch('songs.json')
+            .then(response => response.json())
+            .then(data => {
+                const songsList = document.getElementById('songs-list');
+                data.forEach(song => {
+                    const songDiv = document.createElement('div');
+                    songDiv.classList.add('song');
 
+                    // Create song title
+                    const songTitle = document.createElement('p');
+                    songTitle.textContent = song.name;
+                    songDiv.appendChild(songTitle);
+
+                    // Create audio player
+                    const audioPlayer = document.createElement('audio');
+                    audioPlayer.controls = true;
+                    const source = document.createElement('source');
+                    source.src = song.path;
+                    source.type = 'audio/mp3';
+                    audioPlayer.appendChild(source);
+                    songDiv.appendChild(audioPlayer);
+
+                    songsList.appendChild(songDiv);
+                });
+            })
+            .catch(error => console.error('Error loading songs.json:', error));
+    </script>
 </body>
 </html>
