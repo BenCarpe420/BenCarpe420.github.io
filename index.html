@@ -3,30 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Music Player</title>
+    <title>My Beach Music Player</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(135deg, #4300ff 0%, #717371 100%);
+            background: linear-gradient(135deg, #fcbf49, #ffbc42); /* Sunset colors */
+            background-size: cover;
+            color: #fff;
+            overflow: hidden;
         }
         .container {
             text-align: center;
+            background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px); /* Blur the background for a beachy feel */
             width: 100%;
             max-width: 600px;
-            padding: 20px;
+        }
+        h1 {
+            font-family: 'Comic Sans MS', sans-serif;
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #f8d210; /* Sun yellow */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
         .song-list-container {
             max-height: 300px; /* Maximum height for the scrollable box */
             overflow-y: auto;  /* Enable vertical scrolling */
             padding: 10px;
             border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.1); /* Light semi-transparent */
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
         .song-list {
             list-style: none;
@@ -36,22 +52,28 @@
         .song-item {
             margin: 10px;
             cursor: pointer;
-            font-size: 18px;
-            color: white;
-            padding: 5px;
+            font-size: 20px;
+            color: #fff;
+            padding: 10px;
             border-radius: 5px;
+            transition: background-color 0.3s;
         }
         .song-item:hover {
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.3);
         }
         audio {
             margin-top: 20px;
+            width: 100%;
+            max-width: 350px;
+            background: #ffbc42; /* Matching beachy color */
+            border-radius: 10px;
+            padding: 5px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>My Music Player</h1>
+        <h1>Beach Music Player</h1>
         
         <!-- Audio player -->
         <audio id="audio-player" controls>
