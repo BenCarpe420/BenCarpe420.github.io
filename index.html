@@ -46,15 +46,16 @@
                     songTitle.textContent = song.name;
                     songDiv.appendChild(songTitle);
 
-                    // Create audio player
+                    // Create audio player with controls (including play button)
                     const audioPlayer = document.createElement('audio');
-                    audioPlayer.controls = true;
+                    audioPlayer.controls = true;  // Enables play/pause, volume control, etc.
                     const source = document.createElement('source');
                     source.src = song.path;
                     source.type = 'audio/mp3';
                     audioPlayer.appendChild(source);
                     songDiv.appendChild(audioPlayer);
 
+                    // Add the song div to the list
                     songsList.appendChild(songDiv);
                 });
             })
