@@ -33,7 +33,7 @@
     </div>
 <script>
         // Fetch the songs.json file and dynamically display the songs
-        fetch('songs.json')
+        fetch('SongNames.json')
             .then(response => response.json())
             .then(data => {
                 const songsList = document.getElementById('songs-list');
@@ -59,7 +59,7 @@
                     songsList.appendChild(songDiv);
                 });
             })
-            .catch(error => console.error('Error loading songs.json:', error));
+            .catch(error => console.error('Error loading SongNames.json:', error));
     </script>
 </body>
 </html>
