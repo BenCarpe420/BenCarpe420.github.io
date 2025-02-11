@@ -52,18 +52,10 @@
             margin-bottom: 20px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
-        .song-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
         .song-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
             margin: 10px;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 20px;
             color: #fff;
             padding: 10px;
             border-radius: 5px;
@@ -71,12 +63,6 @@
         }
         .song-item:hover {
             background-color: rgba(255, 255, 255, 0.3);
-        }
-        .song-thumbnail {
-            width: 50px;
-            height: 50px;
-            border-radius: 5px;
-            object-fit: cover;
         }
         audio {
             margin-top: 20px;
@@ -158,24 +144,12 @@
         filteredSongs.forEach((song, index) => {
             const songItem = document.createElement('li');
             songItem.classList.add('song-item');
+            songItem.textContent = song.name;
 
-            // Thumbnail
-            const thumbnail = document.createElement('img');
-            thumbnail.classList.add('song-thumbnail');
-            thumbnail.src = song.thumbnail || 'default-thumbnail.jpg'; // Use default if missing
-            thumbnail.alt = song.name;
-
-            // Song Name
-            const songText = document.createElement('span');
-            songText.textContent = song.name;
-
-            // Click event
             songItem.addEventListener('click', () => {
-                playSong(songs.indexOf(song));
+                playSong(songs.indexOf(song)); // Ensure correct index
             });
 
-            songItem.appendChild(thumbnail);
-            songItem.appendChild(songText);
             songsList.appendChild(songItem);
         });
     }
