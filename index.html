@@ -13,13 +13,13 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: url('Beach-Background.jpg') no-repeat center center/cover; /* Background image */
+            background: url('beach-background.jpg') no-repeat center center/cover;
             color: #fff;
             overflow: hidden;
         }
         .container {
             text-align: center;
-            background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+            background: rgba(0, 0, 0, 0.5);
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -33,6 +33,15 @@
             margin-bottom: 20px;
             color: #f8d210;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        #search-bar {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: center;
         }
         .song-list-container {
             max-height: 300px;
@@ -100,6 +109,8 @@
             <button id="next-song" class="control-btn">⏭ Next</button>
         </div>
 
+        <input type="text" id="search-bar" placeholder="Search for a song...">
+
         <div class="song-list-container">
             <ul id="songs-list" class="song-list"></ul>
         </div>
@@ -117,25 +128,26 @@
     const prevSongBtn = document.getElementById('prev-song');
     const nextSongBtn = document.getElementById('next-song');
     const nowPlayingText = document.getElementById('now-playing');
+    const searchBar = document.getElementById('search-bar');
 
     fetch('SongNames.json')
         .then(response => response.json())
         .then(data => {
             songs = data;
-            renderSongList();
+            renderSongList(songs);
             playSong(0);
         })
         .catch(error => console.error('Error loading SongNames.json:', error));
 
-    function renderSongList() {
+    function renderSongList(filteredSongs) {
         songsList.innerHTML = '';
-        songs.forEach((song, index) => {
+        filteredSongs.forEach((song, index) => {
             const songItem = document.createElement('li');
             songItem.classList.add('song-item');
             songItem.textContent = song.name;
 
             songItem.addEventListener('click', () => {
-                playSong(index);
+                playSong(songs.indexOf(song)); // Ensure correct index
             });
 
             songsList.appendChild(songItem);
@@ -179,6 +191,12 @@
         } else {
             playSong((currentIndex + 1) % songs.length);
         }
+    });
+
+    searchBar.addEventListener('input', (e) => {
+        const searchText = e.target.value.toLowerCase();
+        const filteredSongs = songs.filter(song => song.name.toLowerCase().includes(searchText));
+        renderSongList(filteredSongs);
     });
 
 </script>
